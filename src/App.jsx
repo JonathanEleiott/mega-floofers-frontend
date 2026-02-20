@@ -7,7 +7,6 @@ const App = () => {
     const getAllBunnies = async() => {
       try {
         const response = await fetch(`/api/v1/bunnies`);
-        console.log(`RESPONSE:`, response);
         const retrievedBunnies = await response.json();
         setAllBunnies(retrievedBunnies);
       } catch(err) {
