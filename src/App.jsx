@@ -6,7 +6,7 @@ const App = () => {
   useEffect(() => {
     const getAllBunnies = async() => {
       try {
-        const response = await fetch(`/api/v1/bunnies`);
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/bunnies`);
         const retrievedBunnies = await response.json();
         setAllBunnies(retrievedBunnies);
       } catch(err) {
